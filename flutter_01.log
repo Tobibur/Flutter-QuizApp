@@ -1,0 +1,87 @@
+Flutter crash report; please file at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter run
+
+## exception
+
+TimeoutException: TimeoutException: Request to Dart VM Service timed out: _flutter.listViews({})
+
+```
+#0      VM.invokeRpcRaw (package:flutter_tools/src/vmservice.dart:750)
+<asynchronous suspension>
+#1      VM.invokeRpc (package:flutter_tools/src/vmservice.dart:767)
+<asynchronous suspension>
+#2      VM.refreshViews (package:flutter_tools/src/vmservice.dart:865)
+<asynchronous suspension>
+#3      FlutterDevice.refreshViews (package:flutter_tools/src/resident_runner.dart:80)
+<asynchronous suspension>
+#4      ResidentRunner.refreshViews (package:flutter_tools/src/resident_runner.dart:480)
+<asynchronous suspension>
+#5      HotRunner.attach (package:flutter_tools/src/run_hot.dart:146)
+<asynchronous suspension>
+#6      HotRunner.run (package:flutter_tools/src/run_hot.dart:226)
+<asynchronous suspension>
+#7      RunCommand.runCommand (package:flutter_tools/src/commands/run.dart:368)
+<asynchronous suspension>
+#8      FlutterCommand.verifyThenRunCommand (package:flutter_tools/src/runner/flutter_command.dart:290)
+<asynchronous suspension>
+#9      FlutterCommand.run (package:flutter_tools/src/runner/flutter_command.dart:228)
+<asynchronous suspension>
+#10     CommandRunner.runCommand (package:args/command_runner.dart:194)
+<asynchronous suspension>
+#11     FlutterCommandRunner.runCommand (package:flutter_tools/src/runner/flutter_command_runner.dart:286)
+<asynchronous suspension>
+#12     CommandRunner.run.<anonymous closure> (package:args/command_runner.dart:109)
+#13     new Future.sync (dart:async/future.dart:222)
+#14     CommandRunner.run (package:args/command_runner.dart:109)
+#15     FlutterCommandRunner.run (package:flutter_tools/src/runner/flutter_command_runner.dart:166)
+#16     run.<anonymous closure> (package:flutter_tools/runner.dart:90)
+<asynchronous suspension>
+#17     AppContext._run (package:flutter_tools/src/base/context.dart:76)
+<asynchronous suspension>
+#18     AppContext.runInZone.<anonymous closure> (package:flutter_tools/src/base/context.dart:66)
+#19     _rootRun (dart:async/zone.dart:1126)
+#20     _CustomZone.run (dart:async/zone.dart:1023)
+#21     runZoned (dart:async/zone.dart:1501)
+#22     AppContext.runInZone (package:flutter_tools/src/base/context.dart:65)
+#23     run (package:flutter_tools/runner.dart:61)
+<asynchronous suspension>
+#24     main (package:flutter_tools/executable.dart:48)
+<asynchronous suspension>
+#25     main (file:///E:/Tobi/2018/Flutter%20Sdk%20Tobi/flutter/packages/flutter_tools/bin/flutter_tools.dart:16)
+#26     _startIsolate.<anonymous closure> (dart:isolate-patch/dart:isolate/isolate_patch.dart:277)
+#27     _RawReceivePortImpl._handleMessage (dart:isolate-patch/dart:isolate/isolate_patch.dart:165)
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel beta, v0.2.3, on Microsoft Windows [Version 10.0.16299.125], locale en-IN)
+    • Flutter version 0.2.3 at E:\Tobi\2018\Flutter Sdk Tobi\flutter
+    • Framework revision 5a58b36e36 (3 weeks ago), 2018-03-13 13:20:13 -0700
+    • Engine revision e61bb9ac3a
+    • Dart version 2.0.0-dev.35.flutter-290c576264
+
+[✓] Android toolchain - develop for Android devices (Android SDK 27.0.3)
+    • Android SDK at C:\Users\admin\AppData\Local\Android\sdk
+    • Android NDK location not configured (optional; useful for native profiling support)
+    • Platform android-27, build-tools 27.0.3
+    • Java binary at: C:\Program Files\Android\Android Studio\jre\bin\java
+    • Java version OpenJDK Runtime Environment (build 1.8.0_152-release-915-b01)
+    • All Android licenses accepted.
+
+[✓] Android Studio (version 2.2)
+    • Android Studio at C:\Program Files\Android
+    • Java version OpenJDK Runtime Environment (build 1.8.0_112-release-b06)
+
+[✓] Android Studio (version 3.1)
+    • Android Studio at C:\Program Files\Android\Android Studio
+    • Java version OpenJDK Runtime Environment (build 1.8.0_152-release-915-b01)
+
+[✓] Connected devices (1 available)
+    • Android SDK built for x86 • emulator-5554 • android-x86 • Android 7.0 (API 24) (emulator)
+
+• No issues found!
+```
